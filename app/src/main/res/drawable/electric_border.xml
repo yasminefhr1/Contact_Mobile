@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Bordure de base -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/purple" />
+            <corners android:radius="20dp"/>
+        </shape>
+    </item>
+
+    <!-- Bordure électrique animée -->
+    <item>
+        <animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <path
+                android:name="electricPath"
+                android:fillColor="#411C83"
+            android:pathData="M2,2 L22,2 L22,22 L2,22 Z" />
+            <group android:pivotX="12" android:pivotY="12">
+                <translate android:fromXDelta="-2" android:toXDelta="2" android:duration="400" android:repeatCount="infinite"/>
+            </group>
+        </animated-vector>
+    </item>
+</layer-list>
